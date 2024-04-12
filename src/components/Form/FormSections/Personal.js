@@ -23,7 +23,7 @@ function Personal() {
           <input type="email" name="email" placeholder="johndoe@xyz.com" onChange={handleInputChange}
             value={email}></input>
         </label>
-        <label><span>Phone<span> not recommended</span></span>
+        <label><span>Phone<span>  recommended</span></span>
           <input type="text" name="phone" placeholder="944 704 8000" onChange={handleInputChange}
             value={phone}></input>
         </label>
