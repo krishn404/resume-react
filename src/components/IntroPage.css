@@ -1,78 +1,105 @@
 .intro-container {
-  height: 100%;
+  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 15vh;
-  gap: 2.5rem;
+  justify-content: center; /* Center content vertically */
+  background-image: linear-gradient(to right, var(--color-bg-light), var(--color-bg-dark)); /* Adjust background colors */
+  animation: background-animation 10s ease-in-out infinite alternate; /* Background animation */
 }
 
 .intro-head {
   font-weight: 700;
   display: flex;
   padding-left: 10%;
+  position: relative; /* Needed for text animation */
 }
 
 .head-text {
   width: 80%;
   padding-left: 2rem;
-  /* Animation for the text (replace with your desired animation) */
-  animation: text-animation 3s ease-in-out infinite alternate; /* Adjust duration, timing, and number of repeats as needed */
+  animation: text-animation 3s ease-in-out infinite alternate; /* Adjust animation as needed */
+  color: var(--color-text); /* Use a defined text color */
+  font-family: 'Roboto', sans-serif; /* Consider a modern font */
+}
+
+.head-text span:nth-child(odd) { /* Apply animation to odd words */
+  animation: text-glow 2s ease-in-out infinite alternate;
 }
 
 .intro-desc {
   font-weight: 200;
   font-size: 1.1rem;
-  margin-top: -2rem;
+  margin-top: 2rem; /* Adjust spacing */
   width: 100%;
   padding-left: 20%;
   padding-right: 10%;
+  color: var(--color-text-light); /* Use a lighter text color */
 }
 
 .start-btn-container {
   padding-left: 10%;
+  margin-top: 2rem; /* Adjust spacing */
 }
 
 .get-started-btn {
-  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); /* Adjust colors to match your theme */
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); /* Adjust colors */
   color: #fff; /* Text color for the button */
   height: 2.5rem;
   width: 8rem;
   border-radius: 5px;
-  /* Animation for the button gradient (replace with your desired animation) */
-  animation: button-animation 2s ease-in-out alternate infinite; /* Adjust duration, timing, and number of repeats as needed */
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  animation: button-animation 2s ease-in-out infinite alternate; /* Adjust animation as needed */
 }
 
 .get-started-btn:hover {
-  filter: brightness(0.8);
+  filter: brightness(1.1); /* Increase brightness on hover */
+  transform: scale(1.05); /* Slight scale on hover */
 }
 
 .get-started-btn:active {
-  filter: brightness(0.6);
+  transform: scale(0.95); /* Slight scale on press */
 }
 
-/* Replace these placeholder animations with your desired effects */
+/* Animations */
+
+@keyframes background-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
 @keyframes text-animation {
+  /* Adjust these values for your desired text animation */
   0% {
+    transform: translateY(-10px);
     opacity: 0;
   }
   50% {
+    transform: translateY(0);
     opacity: 1;
   }
   100% {
+    transform: translateY(10px);
     opacity: 0;
   }
 }
 
-@keyframes button-animation {
-  0% {
-    background-position: 0 0;
+@keyframes text-glow {
+  /* Add inner glow animation */
+  from {
+    text-shadow: 0 0 0 var(--color-text);
   }
-  50% {
-    background-position: 100% 0;
+  to {
+    text-shadow: 0 0 10px var(--color-primary-light);
   }
-  100% {
-    background-position: 0 0;
-  }
+}
+
+/* Optional: Text shadow on intro-desc for subtle depth */
+.intro-desc {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
