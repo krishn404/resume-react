@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 60vh;
+ 
 }
 
 .personal-container label {
@@ -151,7 +152,7 @@ button.grip-btn {
   position: fixed;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1.2px);
   display: grid;
   place-items: center;
 }
@@ -187,7 +188,15 @@ button.grip-btn {
   height: 1.8rem;
   width: 3rem;
   border-radius: 3px;
+  /* Add the following styles for the glow effect */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Inner shadow for subtle depth */
+  transition: box-shadow 0.2s ease-in-out; /* Smooth transition on hover */
 }
+
+.select-close-btn:hover {
+  box-shadow: 0 0 5px 10px rgba(0, 0, 255, 0.5); /* Blue glow on hover */
+}
+
 
 .select-card {
   display: flex;
@@ -197,6 +206,19 @@ button.grip-btn {
   padding: 0.5rem;
   color: var(--input-bg);
   border-radius: 3px;
+  background-color: rgb(119, 131, 142);
+  border: 1px solid #ddd; /* Add a subtle border */  /* Optional */
+  transition: all 0.3s ease-in-out; /* Transition for hover effects */
+}
+
+/* Option 1: Subtle Shadow on Hover */
+.select-card:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Option 2: Background Color Change on Hover */
+.select-card:hover {
+  background-color:rgb(97, 126, 156);
 }
 
 .select-card-top {
@@ -206,6 +228,7 @@ button.grip-btn {
   text-align: left;
   gap: 0.3rem;
 }
+
 
 /* ------------------------------- Work Exp ----------------------------------- */
 
