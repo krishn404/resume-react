@@ -11,9 +11,9 @@ function IntroPage({ isFirstVisit, getStartedFn }) {
         <span>Resume.</span>
       </span>
       </h1>
-      <p className="intro-desc">A free resume builder for developers & software engineers.</p>
+      <p className="intro-desc">Your dev career starts here</p>
       <div className="start-btn-container">
-        <button type="button" onClick={getStartedFn} className="get-started-btn">Get Started!</button>
+        <button type="button" onClick={getStartedFn} className="get-started-btn">Create Now</button>
       </div>
     </div>
   );
