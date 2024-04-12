@@ -3,9 +3,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
-  background-image: linear-gradient(to right, var(--color-bg-light), var(--color-bg-dark)); /* Adjust background colors */
-  animation: background-animation 10s ease-in-out infinite alternate; /* Background animation */
+  justify-content: center; 
+  background-color:hsla(344,0%,0%,1);
+
+  margin: 0;
+  overflow-x: hidden;
+background-image:
+radial-gradient(at 44% 8%, hwb(271 17% 61%) 0px, transparent 50%),
+radial-gradient(at 91% 50%, hsla(222,74%,33%,1) 0px, transparent 50%),
+radial-gradient(at 28% 73%, hsla(205,53%,17%,1) 0px, transparent 50%);
 }
 
 .intro-head {
@@ -30,7 +36,7 @@
 .intro-desc {
   font-weight: 200;
   font-size: 1.1rem;
-  margin-top: 2rem; /* Adjust spacing */
+  margin-top: 5rem; /* Adjust spacing */
   width: 100%;
   padding-left: 20%;
   padding-right: 10%;
@@ -38,23 +44,28 @@
 }
 
 .start-btn-container {
-  padding-left: 10%;
-  margin-top: 2rem; /* Adjust spacing */
+  margin-right: 50%;
+  margin-top: 2%;
+  margin-bottom: 10rem; /* Adjust spacing */
 }
 .get-started-btn {
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); /* Adjust colors to match your theme */
-  color: #fff; /* Text color for the button */
-  height: 2.5rem;
+  color: #000000; /* Text color for the button */
+  height: 2.2rem;
   width: 8rem;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 0 10px rgba(68, 63, 63, 0.2); /* Subtle shadow */
   animation: button-animation 2s ease-in-out infinite alternate; /* Adjust animation as needed */
 }
 
 .get-started-btn:hover {
-  filter: brightness(1.1); /* Increase brightness on hover */
-  transform: scale(1.05); /* Slight scale on hover */
+  filter: brightness(2) ; 
+    transform: scale(1.05);
+    font-weight:bolder;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), /* Inner white glow */
+                 0 0 10px rgba(53, 57, 57, 0.5); /* Outer blue glow */
+    transform: scale(1.05);
 }
 
 .get-started-btn:active {
