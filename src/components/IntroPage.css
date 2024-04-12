@@ -16,6 +16,17 @@
 .head-text {
   width: 80%;
   padding-left: 2rem;
+  opacity: 0; /* Initially invisible */
+  animation: reveal-text 1s ease-in-out forwards; /* Adjust duration and timing as needed */
+}
+
+@keyframes reveal-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .intro-desc {
